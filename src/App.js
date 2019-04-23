@@ -20,9 +20,9 @@ const App = function() {
   let [descendingOrder, setDescendingOrder] = useState(true);
 
   return (
-    <div className="flex flex-col items-center pt-16">
+    <div className="flex flex-col items-center pt-16 w-screen">
       <h1 className="mb-12 font-heading">Vega Squad</h1>
-      <table className="font-sans">
+      <table className="font-sans w-full md:w-4/5 mx-auto table-auto overflow-x-auto relative">
         <MemberTableHead
           setOldSortKey={setOldSortKey}
           oldSortKey={oldSortKey}
@@ -31,7 +31,7 @@ const App = function() {
           setDescendingOrder={setDescendingOrder}
           descendingOrder={descendingOrder}
         />
-        <tbody>
+        <tbody className="overflow-x-auto table-auto relative">
           {members && memberRecords && (
             <MemberTableBody
               members={members}

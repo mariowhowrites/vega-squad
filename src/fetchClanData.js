@@ -50,7 +50,9 @@ export async function fetchClanWarLog(setMemberRecords) {
     }
 
     memberData.warDayParticipationRate =
-      (memberData.warBattlesPlayed / memberData.warsFought) * 100;
+      Math.round(
+        (memberData.warBattlesPlayed / memberData.warsFought) * 100 * 100
+      ) / 100;
 
     if (memberData.warDayParticipationRate > 100) {
       memberData.warDayParticipationRate = 100;

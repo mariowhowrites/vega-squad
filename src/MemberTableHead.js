@@ -24,9 +24,9 @@ function MemberTableHead({
 
   return (
     <thead className="text-white antialiased">
-      <tr>
+      <tr className="">
         <th
-          className="cursor-pointer select-none px-6 py-2 bg-red-dark hover:bg-red"
+          className="cursor-pointer select-none md:px-6 md:py-2 bg-red-dark hover:bg-red"
           onClick={() => {
             changeSort("name");
             setFilterCount(++filterCount);
@@ -35,7 +35,7 @@ function MemberTableHead({
           Name
         </th>
         <th
-          className="cursor-pointer select-none px-6 py-2 bg-red-dark hover:bg-red"
+          className="cursor-pointer select-none md:px-6 md:py-2 bg-red-dark hover:bg-red"
           onClick={() => {
             changeSort("winRate");
             setFilterCount(++filterCount);
@@ -44,7 +44,7 @@ function MemberTableHead({
           Win Percentage
         </th>
         <th
-          className="cursor-pointer select-none px-6 py-2 bg-red-dark hover:bg-red"
+          className="cursor-pointer select-none md:px-6 md:py-2 bg-red-dark hover:bg-red"
           onClick={() => {
             changeSort("warDayParticipationRate");
             setFilterCount(++filterCount);
@@ -53,7 +53,7 @@ function MemberTableHead({
           War Day Participation Rate
         </th>
         <th
-          className="cursor-pointer select-none px-6 py-2 bg-red-dark hover:bg-red"
+          className="cursor-pointer select-none md:px-6 md:py-2 bg-red-dark hover:bg-red block"
           onClick={() => {
             changeSort("warParticipationRate");
             setFilterCount(++filterCount);

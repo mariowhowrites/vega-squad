@@ -13,7 +13,7 @@ function MemberTableBody({ members, memberRecords, sortKey, descendingOrder }) {
     .map(([name, record], index) => {
       return (
         <tr key={name} className={rowClasses(index)}>
-          <td className="px-8 py-2">{name}</td>
+          <td className="md:px-8 md:py-2">{name}</td>
           <td>{record.winRate}%</td>
           <td>{record.warDayParticipationRate}%</td>
           <td>{record.warParticipationRate}%</td>
@@ -23,7 +23,7 @@ function MemberTableBody({ members, memberRecords, sortKey, descendingOrder }) {
 }
 
 function rowClasses(index) {
-  let classes = "py-4";
+  let classes = "md:py-4";
 
   if (index % 2 === 0) {
     classes = `${classes} bg-grey-lighter`;
